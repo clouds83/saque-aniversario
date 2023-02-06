@@ -1,20 +1,51 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title> Simular Saque </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <div class="container">
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Mês do seu aniversário</ion-label>
+        <ion-select interface="action-sheet">
+          <ion-select-option value="janeiro">Janeiro</ion-select-option>
+          <ion-select-option value="fevereiro">Fevereiro</ion-select-option>
+          <ion-select-option value="março">Março</ion-select-option>
+          <ion-select-option value="abril">Abril</ion-select-option>
+          <ion-select-option value="maio">Maio</ion-select-option>
+          <ion-select-option value="junho">Junho</ion-select-option>
+          <ion-select-option value="julho">Julho</ion-select-option>
+          <ion-select-option value="agosto">Agosto</ion-select-option>
+          <ion-select-option value="setembro">Setembro</ion-select-option>
+          <ion-select-option value="outubro">Outubro</ion-select-option>
+          <ion-select-option value="novembro">Novembro</ion-select-option>
+          <ion-select-option value="dezembro">Dezembro</ion-select-option>
+        </ion-select>
+      </ion-item>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+      <ion-item>
+        <ion-label position="floating">Saldo atual do FGTS</ion-label>
+        <ion-input type="number" class="teste"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Depósitos mensais</ion-label>
+        <ion-input type="number"></ion-input>
+      </ion-item>
+
+      <ion-button expand="block" size="large" class="bt-calcular"
+        >Calcular Saque</ion-button
+      >
+    </ion-list>
+    <p>
+      <ion-text
+        ><ion-text color="warning"
+          ><ion-icon name="warning"></ion-icon></ion-text
+        >Você tem total sigilo ao usar esse aplicativo. Todos cálculos feitos
+        são visualizados apenas pela pessoa que os fez.</ion-text
+      >
+    </p>
   </div>
 </ion-content>

@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.resultado {
+  margin-bottom: 32px;
+
+  h1 {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  p {
+    margin-top: 0;
+  }
+
+  .valor {
+    font-size: 36px;
+  }
+}
+
+.proximo {
+  margin-bottom: 32px;
+
+  h2 {
+    font-size: 18px;
+  }
+
+  p {
+    margin-top: 0;
+  }
+}
+
+p ion-icon {
+  margin: 0 2px -2px;
+}

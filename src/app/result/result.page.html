@@ -14,9 +14,11 @@
         <hr />
         <p>
           <ion-text color="primary">
-            <strong class="valor">R$ 1.000,00</strong><br />
+            <strong class="valor"
+              >{{this.withdrawAmount | currency: 'BRL'}}</strong
+            ><br />
           </ion-text>
-          em Agosto de 2023.
+          em {{this.monthName()}} de {{this.yearOfWithdraw()}}.
         </p>
       </div>
 
@@ -26,11 +28,15 @@
         </ion-text>
         <hr />
         <p>
-          <ion-text> <strong>R$ 8.000,00</strong><br /> </ion-text>
+          <ion-text>
+            <strong>{{this.fgtsAfterWithdraw | currency: 'BRL'}}</strong><br />
+          </ion-text>
         </p>
       </div>
 
-      <ion-button expand="block" size="large">Calcular Novamente</ion-button>
+      <ion-button expand="block" size="large" (click)="onRecalculate()"
+        >Calcular Novamente</ion-button
+      >
     </div>
     <p>
       <ion-text

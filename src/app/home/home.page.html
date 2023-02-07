@@ -6,39 +6,49 @@
 
 <ion-content class="ion-padding">
   <div class="container">
-    <ion-list>
-      <ion-item>
-        <ion-label position="floating">Mês do seu aniversário</ion-label>
-        <ion-select interface="action-sheet">
-          <ion-select-option value="janeiro">Janeiro</ion-select-option>
-          <ion-select-option value="fevereiro">Fevereiro</ion-select-option>
-          <ion-select-option value="março">Março</ion-select-option>
-          <ion-select-option value="abril">Abril</ion-select-option>
-          <ion-select-option value="maio">Maio</ion-select-option>
-          <ion-select-option value="junho">Junho</ion-select-option>
-          <ion-select-option value="julho">Julho</ion-select-option>
-          <ion-select-option value="agosto">Agosto</ion-select-option>
-          <ion-select-option value="setembro">Setembro</ion-select-option>
-          <ion-select-option value="outubro">Outubro</ion-select-option>
-          <ion-select-option value="novembro">Novembro</ion-select-option>
-          <ion-select-option value="dezembro">Dezembro</ion-select-option>
-        </ion-select>
-      </ion-item>
+    <form [formGroup]="form">
+      <ion-list>
+        <ion-item>
+          <ion-label position="floating">Mês do seu aniversário</ion-label>
+          <ion-select interface="action-sheet" formControlName="birthdayMonth">
+            <ion-select-option value="1">Janeiro</ion-select-option>
+            <ion-select-option value="2">Fevereiro</ion-select-option>
+            <ion-select-option value="3">Março</ion-select-option>
+            <ion-select-option value="4">Abril</ion-select-option>
+            <ion-select-option value="5">Maio</ion-select-option>
+            <ion-select-option value="6">Junho</ion-select-option>
+            <ion-select-option value="7">Julho</ion-select-option>
+            <ion-select-option value="8">Agosto</ion-select-option>
+            <ion-select-option value="9">Setembro</ion-select-option>
+            <ion-select-option value="10">Outubro</ion-select-option>
+            <ion-select-option value="11">Novembro</ion-select-option>
+            <ion-select-option value="12">Dezembro</ion-select-option>
+          </ion-select>
+        </ion-item>
 
-      <ion-item>
-        <ion-label position="floating">Saldo atual do FGTS</ion-label>
-        <ion-input type="number" class="teste"></ion-input>
-      </ion-item>
+        <ion-item>
+          <ion-label position="floating">Saldo atual do FGTS</ion-label>
+          <ion-input type="number" formControlName="initialFgts"></ion-input>
+        </ion-item>
 
-      <ion-item>
-        <ion-label position="floating">Depósitos mensais</ion-label>
-        <ion-input type="number"></ion-input>
-      </ion-item>
+        <ion-item>
+          <ion-label position="floating">Depósitos mensais</ion-label>
+          <ion-input
+            type="number"
+            formControlName="monthlyDeposits"
+          ></ion-input>
+        </ion-item>
 
-      <ion-button expand="block" size="large" class="bt-calcular"
-        >Calcular Saque</ion-button
-      >
-    </ion-list>
+        <ion-button
+          expand="block"
+          size="large"
+          class="bt-calcular"
+          (click)="onSubmit()"
+          [disabled]="!form.valid"
+          >Calcular Saque</ion-button
+        >
+      </ion-list>
+    </form>
     <p>
       <ion-text
         ><ion-text color="warning"

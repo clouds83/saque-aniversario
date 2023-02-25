@@ -24,7 +24,7 @@
 
       <div class="proximo">
         <ion-text>
-          <h2>O saldo do FGTS após o saque:</h2>
+          <h2>Saldo do FGTS após o saque:</h2>
         </ion-text>
         <hr />
         <p>
@@ -34,7 +34,11 @@
         </p>
       </div>
 
-      <ion-button expand="block" size="large" (click)="onRecalculate()"
+      <ion-button
+        expand="block"
+        size="large"
+        (click)="onRecalculate()"
+        color="tertiary"
         >Calcular Novamente</ion-button
       >
     </div>
@@ -42,8 +46,8 @@
       <ion-text
         ><ion-text color="warning"
           ><ion-icon name="warning"></ion-icon></ion-text
-        >Os valores não incluem depósitos esporádicos, como décimo terceiro. O
-        resultado não deve ser usado para tomada de decisão.</ion-text
+        >Valores aproximados. Não devem ser usados para tomadas de
+        decisão.</ion-text
       >
     </p>
   </div>

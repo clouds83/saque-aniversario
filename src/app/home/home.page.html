@@ -45,6 +45,7 @@
           class="bt-calcular"
           (click)="onSubmit()"
           [disabled]="!form.valid"
+          color="tertiary"
           >Calcular Saque</ion-button
         >
       </ion-list>
@@ -53,8 +54,7 @@
       <ion-text
         ><ion-text color="warning"
           ><ion-icon name="warning"></ion-icon></ion-text
-        >Você tem total sigilo ao usar esse aplicativo. Todos cálculos feitos
-        são visualizados apenas pela pessoa que os fez.</ion-text
+        >Ninguém tem acesso aos seus dados inseridos nesse aplicativo.</ion-text
       >
     </p>
   </div>
